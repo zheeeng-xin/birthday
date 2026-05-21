@@ -1,0 +1,322 @@
+<!-- ========================= -->
+<!-- FILE: index.html -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Birthday Website</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- MUSIC -->
+  <!-- ========================= -->
+
+  <audio id="music" loop>
+    <source src="assets/music.mpeg" type="audio/mpeg">
+  </audio>
+
+
+  <!-- ========================= -->
+  <!-- LOADER -->
+  <!-- ========================= -->
+
+  <div class="loader" id="loader">
+
+    <h1>Loading Your Surprise...</h1>
+
+  </div>
+
+
+  <!-- ========================= -->
+  <!-- MAIN -->
+  <!-- ========================= -->
+
+  <div class="slider-container">
+
+
+    <!-- ========================= -->
+    <!-- SCENE 1 -->
+    <!-- ========================= -->
+
+    <section class="scene active" id="scene1">
+
+      <div class="scene-content">
+
+        <h1 class="main-title">
+          Happy Birthday
+        </h1>
+
+        <div class="envelope" id="openEnvelope">
+
+          <div class="seal"></div>
+
+        </div>
+
+        <p class="tap-text">
+          Tap the envelope 💌
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- SCENE 2 -->
+    <!-- ========================= -->
+
+    <section class="scene" id="scene2">
+
+      <img
+        src="assets/hero.jpg"
+        class="bg-image"
+      >
+
+      <div class="overlay"></div>
+
+      <div class="scene-content hero-content">
+
+        <p class="date">
+          21 • 05 • 2001
+        </p>
+
+        <h1 class="hero-title">
+          Happy Birthday,
+          <span>Rinda Euodya Togimpo</span>
+        </h1>
+
+        <p class="hero-desc">
+          thank you for existing in Our Life ♡
+        </p>
+
+        <button onclick="nextScene(3)">
+          Open Your Gift
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- SCENE 3 -->
+    <!-- ========================= -->
+
+    <section class="scene" id="scene3">
+
+      <div class="scene-content">
+
+        <h1 class="section-title">
+          I Have Something For You ♡
+        </h1>
+
+        <div class="gift-wrapper">
+
+          <div class="gift-card" onclick="nextScene(4)">
+            💌
+            <span>Letter</span>
+          </div>
+
+          <div class="gift-card" onclick="nextScene(5)">
+            📸
+            <span>Memories</span>
+          </div>
+
+          <div class="gift-card" onclick="nextScene(6)">
+            🎂
+            <span>Final Wish</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- SCENE 4 -->
+    <!-- ========================= -->
+
+    <section class="scene" id="scene4">
+
+      <div class="letter-bg"></div>
+
+      <div class="scene-content letter-layout">
+
+
+        <!-- PHOTO -->
+
+        <div class="letter-photo-wrapper">
+
+           <img
+           src="assets/letter-photo1.jpeg"
+           id="letterPhoto"
+           class="letter-photo"
+           >
+
+        </div>
+
+
+        <!-- LETTER -->
+
+        <div class="letter-paper">
+
+          <h1>For You 💌</h1>
+
+          <p>
+            Happy Birthday!
+            <br><br>
+
+            Thank you for always being here,
+            listening to my stories,
+            and becoming one of the best people in my life.
+            <br><br>
+
+            I hope your days will always
+            be filled with happiness,
+            good people,
+            and beautiful moments.
+            <br><br>
+
+            Please stay healthy,
+            keep smiling,
+            and never forget
+            how precious you are ♡
+          </p>
+
+          <div class="btn-group">
+
+            <button onclick="backScene(3)">
+              ← Back To Menu
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- SCENE 5 -->
+    <!-- ========================= -->
+
+   <section class="scene" id="scene5">
+
+  <div class="scene-content">
+
+    <h1 class="section-title">
+      Our Memories 📸
+    </h1>
+
+    <div class="gallery">
+
+      <div class="polaroid rotate1">
+        <img src="assets/photo1.jpeg" alt="">
+      </div>
+
+      <div class="polaroid rotate2">
+        <img src="assets/photo2.jpeg" alt="">
+      </div>
+
+      <div class="polaroid rotate3">
+        <img src="assets/photo3.jpeg" alt="">
+      </div>
+
+      <div class="polaroid rotate4">
+        <img src="assets/photo4.jpeg" alt="">
+      </div>
+
+      <div class="polaroid rotate1">
+        <img src="assets/photo5.jpeg" alt="">
+      </div>
+
+      <div class="polaroid rotate2">
+        <img src="assets/photo6.jpeg" alt="">
+      </div>
+
+    </div>
+
+    <div class="btn-group">
+
+      <button onclick="backScene(3)">
+        ← Back To Menu
+      </button>
+
+      </div>
+
+     </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- SCENE 6 -->
+    <!-- ========================= -->
+
+    <section class="scene" id="scene6">
+
+      <div class="scene-content">
+
+        <h1 class="ending-title">
+          Thank You ♡
+        </h1>
+
+        <p class="ending-text">
+          for being my safe place,
+          my comfort person,
+          and one of the best chapters
+          in my life ♡
+        </p>
+
+        <div class="btn-group">
+
+          <button onclick="backScene(3)">
+            ← Back To Menu
+          </button>
+
+          <button onclick="showFinale()">
+            Click Me 🎉
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
